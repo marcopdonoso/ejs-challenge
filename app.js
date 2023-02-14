@@ -36,8 +36,7 @@ app.get("/compose", function(req, res) {
 app.post("/compose", function(req, res) {
   const post = {
     postTitle: req.body.postTitle,
-    postBody: req.body.postBody,
-    postLink: "/posts/" + _.kebabCase(req.body.postTitle)
+    postBody: req.body.postBody
   };
   posts.push(post);
   res.redirect("/");
