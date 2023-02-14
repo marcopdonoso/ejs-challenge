@@ -3,6 +3,6 @@
 <p><%= homeStartingContent %></p>
 <% posts.forEach(post => { %>
     <h1><%= post.postTitle %></h1>
-    <p><%= post.postBody.slice(0, 100) %> ...</p>
+    <p><%= post.postBody.slice(0, 100) + " ..." %> <a href="<%= post.postLink %>">Read More</a></p>
 <% }); %>
 <%- include('partials/footer') %>
