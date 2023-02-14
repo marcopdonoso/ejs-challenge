@@ -2,7 +2,8 @@
 <h1>Home</h1>
 <p><%= homeStartingContent %></p>
 <% posts.forEach(post => { %>
+    <% let slicedBody = post.postBody.slice(0, 100) + " ..."; %>
     <h1><%= post.postTitle %></h1>
-    <p><%= post.postBody %></p>
+    <p><%= slicedBody %></p>
 <% }); %>
 <%- include('partials/footer') %>
